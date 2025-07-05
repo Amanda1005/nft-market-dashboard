@@ -48,7 +48,11 @@ sort_option = st.selectbox(
 top10 = df.sort_values(by=sort_option, ascending=False).head(10)
 
 # Show Table
-st.dataframe(top10.reset_index(drop=True))
+top10_display = top10.reset_index(drop=True)
+top10_display.index = top10_display.index + 1 
+top10_display.index.name = "Rank" 
+
+st.dataframe(top10_display)
 
 
 # ----------------- Floor Price Distribution-----------------

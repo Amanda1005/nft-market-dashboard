@@ -1,4 +1,3 @@
-# utils/reservoir_api.py
 import requests
 
 BASE_URL = "https://api.reservoir.tools"
